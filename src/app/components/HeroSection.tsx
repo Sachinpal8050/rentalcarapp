@@ -6,7 +6,7 @@ import Image from "next/image"
 export default function HeroSection() {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center">
-      <Image src="/hero-bg.jpg" alt="Premium car with driver" layout="fill" objectFit="cover" quality={100} priority />
+      <Image src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Premium car with driver" layout="fill" objectFit="cover" quality={100} priority />
       <div className="absolute inset-0 bg-black opacity-50" />
       <div className="relative z-10 text-center">
         <motion.h1

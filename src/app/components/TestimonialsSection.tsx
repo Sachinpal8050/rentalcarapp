@@ -4,11 +4,11 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 
 const testimonials = [
-  { name: "John Doe", photo: "/john-doe.jpg", rating: 5, review: "Fantastic service, very professional driver!" },
-  { name: "Jane Smith", photo: "/jane-smith.jpg", rating: 4, review: "Great experience, will definitely use again." },
+  { name: "John Doe", photo: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg", rating: 5, review: "Fantastic service, very professional driver!" },
+  { name: "Jane Smith", photo: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg", rating: 4, review: "Great experience, will definitely use again." },
   {
     name: "Mike Johnson",
-    photo: "/mike-johnson.jpg",
+    photo: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
     rating: 5,
     review: "Punctual and courteous. Highly recommended!",
   },

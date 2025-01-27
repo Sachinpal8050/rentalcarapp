@@ -65,6 +65,7 @@ export default function BookingFormSection() {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                placeholder="Enter your full name"
                 className="w-full p-2 border rounded-md"
               />
             </div>
@@ -79,6 +80,7 @@ export default function BookingFormSection() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
+                placeholder="Enter your phone number"
                 className="w-full p-2 border rounded-md"
               />
             </div>
@@ -93,6 +95,7 @@ export default function BookingFormSection() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                placeholder="Enter your email address"
                 className="w-full p-2 border rounded-md"
               />
             </div>
@@ -121,6 +124,7 @@ export default function BookingFormSection() {
                 value={formData.pickup}
                 onChange={handleChange}
                 required
+                placeholder="Enter pickup location"
                 className="w-full p-2 border rounded-md"
               />
             </div>
@@ -135,6 +139,7 @@ export default function BookingFormSection() {
                 value={formData.dropoff}
                 onChange={handleChange}
                 required
+                placeholder="Enter drop-off location"
                 className="w-full p-2 border rounded-md"
               />
             </div>

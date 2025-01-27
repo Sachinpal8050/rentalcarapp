@@ -35,7 +35,7 @@ export default function WhyChooseUsSection() {
             >
               <div className="md:w-1/2">
                 <Image
-                  src={`/reason-${index + 1}.jpg`}
+                  src={`https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg`}
                   alt={reason.title}
                   width={500}
                   height={300}

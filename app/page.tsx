@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import AboutSection from "./components/AboutSection"
+import VideoSection from "./components/VideoSection"
 import FleetSection from "./components/FleetSection"
 import ServicesSection from "./components/ServicesSection"
 import WhyChooseUsSection from "./components/WhyChooseUsSection"
@@ -11,7 +12,7 @@ import TestimonialsSection from "./components/TestimonialsSection"
 import RatingSection from "./components/RatingSection"
 import BookingFormSection from "./components/BookingFormSection"
 import ContactSection from "./components/ContactSection"
-import Footer from "./components/Footer"
+import FloatingCTA from "./components/FloatingCTA"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
+      <VideoSection />
       <FleetSection />
       <ServicesSection />
       <WhyChooseUsSection />
@@ -26,7 +28,7 @@ export default function Home() {
       <RatingSection />
       <BookingFormSection />
       <ContactSection />
-      <Footer />
+      <FloatingCTA />
     </main>
   )
 }

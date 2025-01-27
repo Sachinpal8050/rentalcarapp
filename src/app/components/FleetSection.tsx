@@ -8,19 +8,19 @@ const cars = [
     name: "Toyota Camry",
     features: "AC, spacious seating, luggage space",
     price: "Starting at $80 per day",
-    image: "/car1.jpg",
+    image: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
   },
   {
     name: "Honda Accord",
     features: "AC, comfortable interior, ample trunk space",
     price: "Starting at $85 per day",
-    image: "/car2.jpg",
+    image: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
   },
   {
     name: "Nissan Altima",
     features: "AC, fuel-efficient, smooth ride",
     price: "Starting at $75 per day",
-    image: "/car3.jpg",
+    image: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg",
   },
 ]
 

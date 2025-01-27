@@ -15,7 +15,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
         >
           <Image
-            src="/about-image.jpg"
+            src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg"
             alt="Professional driver"
             width={500}
             height={500}
@@ -30,16 +30,16 @@ export default function AboutSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text">
-            Who We Are
+            Professional Drivers at Your Service
           </h2>
           <p className="text-white mb-6">
-            With a fleet of premium vehicles and experienced drivers, we ensure safe and comfortable travel for business
-            or leisure.
+            Our team of highly skilled and experienced drivers ensures a safe, comfortable, and luxurious journey for
+            every client. With extensive training and a commitment to excellence, our chauffeurs provide:
           </p>
-          <ul className="space-y-2">
-            <li className="flex items-center">
+          <ul className="space-y-4">
+            <li className="flex items-start">
               <svg
-                className="w-6 h-6 mr-2 text-[#EE8437]"
+                className="w-6 h-6 mr-2 text-[#EE8437] flex-shrink-0 mt-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -47,11 +47,11 @@ export default function AboutSection() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-white">Affordable Pricing</span>
+              <span className="text-white">Punctuality and reliability for all your transportation needs</span>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-start">
               <svg
-                className="w-6 h-6 mr-2 text-[#EE8437]"
+                className="w-6 h-6 mr-2 text-[#EE8437] flex-shrink-0 mt-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -59,7 +59,31 @@ export default function AboutSection() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              <span className="text-white">Professional Drivers</span>
+              <span className="text-white">Extensive knowledge of local routes and traffic patterns</span>
+            </li>
+            <li className="flex items-start">
+              <svg
+                className="w-6 h-6 mr-2 text-[#EE8437] flex-shrink-0 mt-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="text-white">Personalized service tailored to your preferences</span>
+            </li>
+            <li className="flex items-start">
+              <svg
+                className="w-6 h-6 mr-2 text-[#EE8437] flex-shrink-0 mt-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span className="text-white">Professionalism and discretion for business and leisure travel</span>
             </li>
           </ul>
         </motion.div>

@@ -19,3 +19,23 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 640px) {
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+

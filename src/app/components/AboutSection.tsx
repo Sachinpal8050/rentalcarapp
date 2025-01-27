@@ -15,7 +15,7 @@ export default function AboutSection() {
           viewport={{ once: true }}
         >
           <Image
-            src="/about-image.jpg"
+            src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg"
             alt="Professional driver"
             width={500}
             height={500}
