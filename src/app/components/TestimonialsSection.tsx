@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useState } from "react"
+import Image from "next/image"
 
 const testimonials = [
   { name: "John Doe", photo: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg", rating: 5, review: "Fantastic service, very professional driver!" },
@@ -47,7 +48,7 @@ export default function TestimonialsSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center mb-4">
-              <img
+              <Image
                 src={testimonials[currentIndex].photo || "/placeholder.svg"}
                 alt={testimonials[currentIndex].name}
                 className="w-16 h-16 rounded-full mr-4"

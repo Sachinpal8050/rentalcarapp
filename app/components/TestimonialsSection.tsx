@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image"
 
 const testimonials = [
   {
@@ -62,9 +63,11 @@ export default function TestimonialsSection() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center mb-4">
-              <img
+              <Image
                 src={testimonials[currentIndex].photo}
                 alt={testimonials[currentIndex].name}
+                height={50}
+                width={50}
                 className="w-16 h-16 rounded-full mr-4"
               />
               <div>

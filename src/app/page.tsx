@@ -1,6 +1,4 @@
 "use client"
-
-import { motion } from "framer-motion"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import AboutSection from "./components/AboutSection"
