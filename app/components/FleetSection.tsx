@@ -5,35 +5,44 @@ import Image from "next/image";
 
 const cars = [
   {
-    name: "Toyota Camry",
-    features: "AC, spacious seating, luggage space",
-    price: "Starting at $80 per day",
+    name: "Swift Dzire",
+    features: "AC, comfortable seating, fuel-efficient",
+    price: "Starting at $60 per day",
+    seatingCapacity: 5, // Updated seating capacity
+    description:
+      "The Swift Dzire is a compact sedan known for its fuel efficiency, easy handling, and comfortable ride.",
     image:
       "https://img.etimg.com/thumb/msid-46550299,width-640,height-480,imgsize-187842,resizemode-4/handling-and-braking.jpg",
-    description:
-      "The Toyota Camry is a reliable, fuel-efficient sedan with modern features and a smooth driving experience.",
   },
   {
-    name: "Honda Accord",
-    features: "AC, comfortable interior, ample trunk space",
-    price: "Starting at $85 per day",
+    name: "Traveller 22 Seater",
+    features: "AC, spacious seating for large groups, ample luggage space",
+    price: "Starting at $250 per day",
+    seatingCapacity: 22, // Updated seating capacity
+    description:
+      "The Traveller 22 Seater is ideal for group travel, providing spacious seating and excellent comfort for long journeys.",
     image:
-      "https://img.etimg.com/thumb/msid-46550299,width-640,height-480,imgsize-187842,resizemode-4/handling-and-braking.jpg",
-    description:
-      "The Honda Accord offers premium comfort, advanced safety features, and a luxurious interior.",
+      "https://5.imimg.com/data5/SELLER/Default/2021/5/CW/WV/TU/92345100/16-seater-tempo-traveler-rental-service.jpg",
   },
   {
-    name: "Nissan Altima",
+    name: "Maruti Ertiga",
     features: "AC, fuel-efficient, smooth ride",
     price: "Starting at $75 per day",
-    image:
-      "https://img.etimg.com/thumb/msid-46550299,width-640,height-480,imgsize-187842,resizemode-4/handling-and-braking.jpg",
+    seatingCapacity: 7, // Same seating capacity
     description:
-      "The Nissan Altima combines fuel efficiency with a smooth ride, perfect for long drives.",
+      "The Maruti Ertiga is a versatile MPV offering ample space and a comfortable ride for families or group travel.",
+    image: "https://imgd.aeplcdn.com/1056x594/n/c6es93a_1572125.jpg",
   },
 ];
 
 export default function FleetSection() {
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById("booking");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="fleet" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
@@ -55,6 +64,7 @@ export default function FleetSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              onClick={scrollToBooking}
             >
               <div className="relative h-56">
                 <Image
@@ -71,6 +81,11 @@ export default function FleetSection() {
                 </h3>
                 <p className="text-gray-600 mb-4">{car.features}</p>
                 <p className="text-gray-500 italic mb-4">{car.description}</p>
+                <p className="text-gray-600 mb-4">
+                  <strong>Seating Capacity: </strong>
+                  {car.seatingCapacity} seats
+                </p>{" "}
+                {/* Added seating capacity */}
                 <p className="text-[#EE8437] font-bold mb-6 text-lg">
                   {car.price}
                 </p>

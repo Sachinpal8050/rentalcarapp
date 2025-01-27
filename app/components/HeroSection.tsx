@@ -1,12 +1,36 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function HeroSection() {
+  const scrollToBooking = () => {
+    const bookingSection = document.getElementById("booking");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const scrollToLearnMore = () => {
+    const learnMoreSection = document.getElementById("about");
+    if (learnMoreSection) {
+      learnMoreSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center">
-      <Image src="/carWithDriver.png" alt="Premium car with driver" layout="fill" objectFit="cover" quality={100} priority />
+    <section
+      id="home"
+      className="relative h-screen flex items-center justify-center"
+    >
+      <Image
+        src="/carWithDriver.png"
+        alt="Premium car with driver"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        priority
+      />
       <div className="absolute inset-0 bg-black opacity-50" />
       <div className="relative z-10 text-center">
         <motion.h1
@@ -30,6 +54,7 @@ export default function HeroSection() {
             className="bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-6 py-3 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToBooking}
           >
             Book Now
           </motion.button>
@@ -37,12 +62,12 @@ export default function HeroSection() {
             className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-[#EE8437] transition-colors duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={scrollToLearnMore}
           >
             Learn More
           </motion.button>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
