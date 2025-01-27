@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { useState, useEffect } from "react"
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToBooking = () => {
-    const bookingSection = document.getElementById("booking")
+    const bookingSection = document.getElementById("booking");
     if (bookingSection) {
-      bookingSection.scrollIntoView({ behavior: "smooth" })
+      bookingSection.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <motion.header
@@ -39,12 +39,21 @@ export default function Header() {
           CarRental
         </Link>
         <nav className="hidden md:flex space-x-6">
-          {["Home", "About", "Fleet", "Services", "Testimonials", "Contact"].map((item) => (
+          {[
+            "Home",
+            "About",
+            "Fleet",
+            "Services",
+            "Testimonials",
+            "Contact",
+          ].map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
               className={`text-sm font-medium transition-colors duration-300 ${
-                isScrolled ? "text-gray-800 hover:text-[#EE8437]" : "text-white hover:text-[#EE8437]"
+                isScrolled
+                  ? "text-gray-800 hover:text-[#EE8437]"
+                  : "text-white hover:text-[#EE8437]"
               }`}
             >
               {item}
@@ -61,6 +70,5 @@ export default function Header() {
         </motion.button>
       </div>
     </motion.header>
-  )
+  );
 }
-

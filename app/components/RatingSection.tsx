@@ -17,10 +17,10 @@ export default function RatingSection() {
   }
 
   return (
-    <section id="rating" className="py-20">
+    <section id="rating" className="py-20 bg-gradient-to-br from-[#FCE5D8] to-[#F6D1B1] text-gray-800">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
+          className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -29,17 +29,17 @@ export default function RatingSection() {
           Our Customers Rate Us Highly!
         </motion.h2>
         <motion.div
-          className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto"
+          className="bg-white rounded-lg shadow-xl p-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-6">
             {[1, 2, 3, 4, 5].map((star) => (
               <motion.button
                 key={star}
-                className={`text-3xl ${star <= rating ? "text-yellow-400" : "text-gray-300"}`}
+                className={`text-4xl ${star <= rating ? "text-yellow-400" : "text-gray-300"}`}
                 onClick={() => setRating(star)}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
@@ -48,10 +48,10 @@ export default function RatingSection() {
               </motion.button>
             ))}
           </div>
-          <p className="text-center mb-4">Average Rating: 4.8/5</p>
+          <p className="text-center text-lg mb-6 text-gray-700">Average Rating: 4.8/5</p>
           <form onSubmit={handleSubmit}>
             <textarea
-              className="w-full p-2 border rounded-md mb-4"
+              className="w-full p-4 border-2 border-gray-300 rounded-md mb-6 focus:outline-none focus:ring-2 focus:ring-[#EE8437] focus:border-[#EE8437] transition duration-300"
               rows={4}
               placeholder="Leave your comment..."
               value={comment}
@@ -71,4 +71,3 @@ export default function RatingSection() {
     </section>
   )
 }
-

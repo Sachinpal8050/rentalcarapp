@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import { useState } from "react"
 
@@ -11,18 +9,17 @@ export default function BookingFormSection() {
     dateTime: "",
     pickup: "",
     dropoff: "",
+    carType: "",
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prevData) => ({ ...prevData, [name]: value }))
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
     console.log("Form submitted:", formData)
-    // Reset the form
     setFormData({
       name: "",
       phone: "",
@@ -30,14 +27,15 @@ export default function BookingFormSection() {
       dateTime: "",
       pickup: "",
       dropoff: "",
+      carType: "",
     })
   }
 
   return (
-    <section id="booking" className="py-20">
+    <section id="booking" className="py-20 bg-gradient-to-br from-[#1e1e1e] to-[#434343] text-white">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
+          className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#FF6F00] to-[#FF9E3D] text-transparent bg-clip-text"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -47,16 +45,16 @@ export default function BookingFormSection() {
         </motion.h2>
         <motion.form
           onSubmit={handleSubmit}
-          className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto"
+          className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">
-                Name
+              <label htmlFor="name" className="block mb-2 text-lg font-medium text-gray-700">
+                Full Name
               </label>
               <input
                 type="text"
@@ -66,11 +64,11 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter your full name"
-                className="w-full p-2 border rounded-md"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor="phone" className="block mb-2 text-lg font-medium text-gray-700">
                 Phone Number
               </label>
               <input
@@ -81,11 +79,11 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter your phone number"
-                className="w-full p-2 border rounded-md"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block mb-2 text-lg font-medium text-gray-700">
                 Email Address
               </label>
               <input
@@ -96,11 +94,11 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter your email address"
-                className="w-full p-2 border rounded-md"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="dateTime" className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor="dateTime" className="block mb-2 text-lg font-medium text-gray-700">
                 Date and Time
               </label>
               <input
@@ -110,11 +108,11 @@ export default function BookingFormSection() {
                 value={formData.dateTime}
                 onChange={handleChange}
                 required
-                className="w-full p-2 border rounded-md"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="pickup" className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor="pickup" className="block mb-2 text-lg font-medium text-gray-700">
                 Pickup Location
               </label>
               <input
@@ -125,11 +123,11 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter pickup location"
-                className="w-full p-2 border rounded-md"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="dropoff" className="block mb-2 text-sm font-medium text-gray-700">
+              <label htmlFor="dropoff" className="block mb-2 text-lg font-medium text-gray-700">
                 Drop-off Location
               </label>
               <input
@@ -140,13 +138,31 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter drop-off location"
-                className="w-full p-2 border rounded-md"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
               />
+            </div>
+            <div>
+              <label htmlFor="carType" className="block mb-2 text-lg font-medium text-gray-700">
+                Car Type
+              </label>
+              <select
+                id="carType"
+                name="carType"
+                value={formData.carType}
+                onChange={handleChange}
+                required
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+              >
+                <option value="">Select Car Type</option>
+                <option value="car1">Car 1</option>
+                <option value="car2">Car 2</option>
+                <option value="car3">Car 3</option>
+              </select>
             </div>
           </div>
           <motion.button
             type="submit"
-            className="w-full mt-6 bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-4 py-2 rounded-full hover:shadow-lg transition-shadow duration-300"
+            className="w-full mt-6 bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-6 py-3 rounded-full hover:shadow-xl transition-shadow duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -157,4 +173,3 @@ export default function BookingFormSection() {
     </section>
   )
 }
-
