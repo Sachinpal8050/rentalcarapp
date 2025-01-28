@@ -6,19 +6,19 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Sachin",
     photo: "/avatar-placeholder.svg",
     rating: 5,
     review: "Fantastic service, very professional driver!",
   },
   {
-    name: "Jane Smith",
+    name: "Vipin Verma",
     photo: "/avatar-placeholder.svg",
     rating: 4,
     review: "Great experience, will definitely use again.",
   },
   {
-    name: "Mike Johnson",
+    name: "Aman Singh",
     photo: "/avatar-placeholder.svg",
     rating: 5,
     review: "Punctual and courteous. Highly recommended!",
@@ -39,10 +39,7 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section
-      id="services"
-      className="py-20 bg-gray-100"
-    >
+    <section id="services" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"

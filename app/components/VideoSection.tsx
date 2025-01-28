@@ -41,7 +41,7 @@ export default function VideoSection() {
             muted
             playsInline
           >
-            <source src="./dummyVideo.mp4" type="video/mp4" />
+            <source src="./drivingVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Play Button (Optional) */}

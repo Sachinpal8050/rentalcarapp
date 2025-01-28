@@ -11,18 +11,16 @@ const cars = [
     seatingCapacity: 5, // Updated seating capacity
     description:
       "The Swift Dzire is a compact sedan known for its fuel efficiency, easy handling, and comfortable ride.",
-    image:
-      "https://img.etimg.com/thumb/msid-46550299,width-640,height-480,imgsize-187842,resizemode-4/handling-and-braking.jpg",
+    image: "/swiftCarImg.jpeg",
   },
   {
-    name: "Traveller 22 Seater",
+    name: "Traveller 16 Seater",
     features: "AC, spacious seating for large groups, ample luggage space",
     price: "Starting at $250 per day",
-    seatingCapacity: 22, // Updated seating capacity
+    seatingCapacity: 16, // Updated seating capacity
     description:
-      "The Traveller 22 Seater is ideal for group travel, providing spacious seating and excellent comfort for long journeys.",
-    image:
-      "https://5.imimg.com/data5/SELLER/Default/2021/5/CW/WV/TU/92345100/16-seater-tempo-traveler-rental-service.jpg",
+      "The Traveller 16 Seater is ideal for group travel, providing spacious seating and excellent comfort for long journeys.",
+    image: "/traveller16Seater.jpeg",
   },
   {
     name: "Maruti Ertiga",
@@ -31,7 +29,7 @@ const cars = [
     seatingCapacity: 7, // Same seating capacity
     description:
       "The Maruti Ertiga is a versatile MPV offering ample space and a comfortable ride for families or group travel.",
-    image: "https://imgd.aeplcdn.com/1056x594/n/c6es93a_1572125.jpg",
+    image: "/eartiga.jpeg",
   },
 ];
 

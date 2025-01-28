@@ -177,9 +177,9 @@ export default function BookingFormSection() {
                 className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               >
                 <option value="">Select Car Type</option>
-                <option value="car1">Car 1</option>
-                <option value="car2">Car 2</option>
-                <option value="car3">Car 3</option>
+                <option value="car1">Swift Dzire</option>
+                <option value="car2">Traveller 16 Seater</option>
+                <option value="car3">Maruti Ertiga</option>
               </select>
             </div>
           </div>
