@@ -13,7 +13,7 @@ export default function WhyChooseUsSection() {
   return (
     <section
       id="why-choose-us"
-      className="py-20 bg-gradient-to-br from-[#F1D0A9] to-[#F9C79C] text-gray-900"
+      className="py-20 bg-gray-100"
     >
       <div className="container mx-auto px-4">
         <motion.h2

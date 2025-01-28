@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import Image from "next/image"
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-r from-[#F6D8B5] to-[#C8A979]"
+      className="py-20 bg-gray-100"
     >
       <div className="container mx-auto px-4">
         <motion.h2
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
         <div className="relative">
           <motion.div
             key={currentIndex}
-            className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto"
+            className="relative bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto"
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
                 className="w-16 h-16 rounded-full mr-4"
               />
               <div>
-                <h3 className="text-xl font-semibold">
+                <h3 className="text-xl font-semibold text-gray-800">
                   {testimonials[currentIndex].name}
                 </h3>
                 <div className="flex">
@@ -96,43 +96,43 @@ export default function TestimonialsSection() {
             <p className="text-gray-600">{testimonials[currentIndex].review}</p>
           </motion.div>
           <button
-  className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md border-2 border-gray-700"
-  onClick={prevTestimonial}
->
-  <svg
-    className="w-6 h-6 text-gray-700"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M15 19l-7-7 7-7"
-    />
-  </svg>
-</button>
-<button
-  className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md border-2 border-gray-700"
-  onClick={nextTestimonial}
->
-  <svg
-    className="w-6 h-6 text-gray-700"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M9 5l7 7-7 7"
-    />
-  </svg>
-</button>
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-800 text-white rounded-full p-3 shadow-md"
+            onClick={prevTestimonial}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 hover:bg-gray-800 text-white rounded-full p-3 shadow-md"
+            onClick={nextTestimonial}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

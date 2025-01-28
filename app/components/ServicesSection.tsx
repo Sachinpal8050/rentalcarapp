@@ -14,7 +14,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-r from-[#F6D8B5] to-[#C8A979]"
+     className="py-20 bg-gray-100"
     >
       <div className="container mx-auto px-4">
         <motion.h2

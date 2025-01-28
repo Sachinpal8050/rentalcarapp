@@ -22,7 +22,7 @@ export default function AboutSection() {
             alt="Professional driver"
             width={500}
             height={500}
-            className="rounded-lg shadow-lg border border-gray-200 rounded-[20rem]"
+            className="rounded-[1rem] shadow-lg border border-gray-200"
           />
         </motion.div>
         <motion.div

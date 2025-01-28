@@ -64,7 +64,6 @@ export default function FleetSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              onClick={scrollToBooking}
             >
               <div className="relative h-56">
                 <Image
@@ -80,19 +79,16 @@ export default function FleetSection() {
                   {car.name}
                 </h3>
                 <p className="text-gray-600 mb-4">{car.features}</p>
-                <p className="text-gray-500 italic mb-4">{car.description}</p>
+                <p className="text-gray-500 mb-4">{car.description}</p>
                 <p className="text-gray-600 mb-4">
                   <strong>Seating Capacity: </strong>
                   {car.seatingCapacity} seats
                 </p>{" "}
-                {/* Added seating capacity */}
-                <p className="text-[#EE8437] font-bold mb-6 text-lg">
-                  {car.price}
-                </p>
                 <motion.button
                   className="w-full bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={scrollToBooking}
                 >
                   Book Now
                 </motion.button>

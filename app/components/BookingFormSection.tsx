@@ -1,5 +1,5 @@
-import { motion } from "framer-motion"
-import { useState } from "react"
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function BookingFormSection() {
   const [formData, setFormData] = useState({
@@ -10,16 +10,18 @@ export default function BookingFormSection() {
     pickup: "",
     dropoff: "",
     carType: "",
-  })
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData((prevData) => ({ ...prevData, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
+    e.preventDefault();
+    console.log("Form submitted:", formData);
     setFormData({
       name: "",
       phone: "",
@@ -28,14 +30,14 @@ export default function BookingFormSection() {
       pickup: "",
       dropoff: "",
       carType: "",
-    })
-  }
+    });
+  };
 
   return (
-    <section id="booking" className="py-20 bg-gradient-to-br from-[#1e1e1e] to-[#434343] text-white">
+    <section id="booking" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#FF6F00] to-[#FF9E3D] text-transparent bg-clip-text"
+          className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -53,7 +55,10 @@ export default function BookingFormSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="name"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Full Name
               </label>
               <input
@@ -64,11 +69,14 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter your full name"
-                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="phone" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="phone"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Phone Number
               </label>
               <input
@@ -79,11 +87,14 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter your phone number"
-                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="email"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Email Address
               </label>
               <input
@@ -94,11 +105,14 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter your email address"
-                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="dateTime" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="dateTime"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Date and Time
               </label>
               <input
@@ -108,11 +122,14 @@ export default function BookingFormSection() {
                 value={formData.dateTime}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="pickup" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="pickup"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Pickup Location
               </label>
               <input
@@ -123,11 +140,14 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter pickup location"
-                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="dropoff" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="dropoff"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Drop-off Location
               </label>
               <input
@@ -138,11 +158,14 @@ export default function BookingFormSection() {
                 onChange={handleChange}
                 required
                 placeholder="Enter drop-off location"
-                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               />
             </div>
             <div>
-              <label htmlFor="carType" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="carType"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Car Type
               </label>
               <select
@@ -151,7 +174,7 @@ export default function BookingFormSection() {
                 value={formData.carType}
                 onChange={handleChange}
                 required
-                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] transition-all duration-300"
+                className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               >
                 <option value="">Select Car Type</option>
                 <option value="car1">Car 1</option>
@@ -171,5 +194,5 @@ export default function BookingFormSection() {
         </motion.form>
       </div>
     </section>
-  )
+  );
 }
