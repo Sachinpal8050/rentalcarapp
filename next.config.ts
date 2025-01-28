@@ -1,5 +1,6 @@
 module.exports = {
-  output: 'export',
+  output: "export",
+  distDir: "build",
   images: {
     domains: [
       "images.pexels.com",
@@ -10,5 +11,6 @@ module.exports = {
       "5.imimg.com",
       "imgd.aeplcdn.com",
     ],
+    unoptimized: true,
   },
 };
