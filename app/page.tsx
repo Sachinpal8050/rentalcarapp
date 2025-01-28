@@ -16,7 +16,7 @@ import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-r from-[#EE8437] to-[#705541]">
+    <main className="overflow-x-hidden">
       <Header />
       <HeroSection />
       <AboutSection />
