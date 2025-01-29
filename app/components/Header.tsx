@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { logEvent, analytics } from "../../firebase";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,6 +17,7 @@ export default function Header() {
   }, []);
 
   const scrollToBooking = () => {
+    logEvent(analytics, "book_now_header_press");
     const bookingSection = document.getElementById("booking");
     if (bookingSection) {
       bookingSection.scrollIntoView({ behavior: "smooth" });

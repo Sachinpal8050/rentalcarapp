@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { logEvent, analytics } from "../../firebase";
 
 export default function HeroSection() {
   const scrollToBooking = () => {
+    logEvent(analytics, "book_now_hero_press");
     const bookingSection = document.getElementById("booking");
     if (bookingSection) {
       bookingSection.scrollIntoView({ behavior: "smooth" });
@@ -12,6 +14,7 @@ export default function HeroSection() {
   };
 
   const scrollToLearnMore = () => {
+    logEvent(analytics, "learn_more_hero_press");
     const learnMoreSection = document.getElementById("about");
     if (learnMoreSection) {
       learnMoreSection.scrollIntoView({ behavior: "smooth" });

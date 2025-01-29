@@ -4,6 +4,7 @@ import { makeApiCall } from "@/utils";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { logEvent, analytics } from "../../firebase";
 
 export default function RatingSection() {
   const [rating, setRating] = useState(0);
@@ -11,6 +12,10 @@ export default function RatingSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    logEvent(analytics, "rating_initiated", {
+      rating,
+      comment,
+    });
     const toastId = toast.loading("Loading...");
     const data = await makeApiCall("/rating/rating", "POST", {
       rating,

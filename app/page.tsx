@@ -13,8 +13,12 @@ import BookingFormSection from "./components/BookingFormSection";
 import ContactSection from "./components/ContactSection";
 import FloatingCTA from "./components/FloatingCTA";
 import { Toaster } from "react-hot-toast";
-
+import { useEffect } from "react";
+import { analytics, logEvent } from "../firebase";
 export default function Home() {
+  useEffect(() => {
+    logEvent(analytics, "start_app");
+  }, []);
   return (
     <main className="overflow-x-hidden">
       <Header />
@@ -29,7 +33,7 @@ export default function Home() {
       <RatingSection />
       <ContactSection />
       <FloatingCTA />
-      <Toaster position="bottom-right"  />
+      <Toaster position="bottom-right" />
     </main>
   );
 }

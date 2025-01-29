@@ -1,9 +1,13 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Phone } from "lucide-react"
+import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
+import { analytics, logEvent } from "../../firebase";
 
 export default function FloatingCallButton() {
+  const hanleCallPress = () => {
+    logEvent(analytics, "call_now");
+  };
   return (
     <motion.a
       href="tel:+917500353702"
@@ -15,8 +19,9 @@ export default function FloatingCallButton() {
       transition={{ duration: 0.5 }}
     >
       <Phone className="w-6 h-6" />
-      <span className="ml-2 hidden md:inline">Call Now</span>
+      <span onClick={hanleCallPress} className="ml-2 hidden md:inline">
+        Call Now
+      </span>
     </motion.a>
-  )
+  );
 }
-

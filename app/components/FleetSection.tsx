@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { logEvent, analytics } from "../../firebase";
 
 const cars = [
   {
@@ -35,6 +36,7 @@ const cars = [
 
 export default function FleetSection() {
   const scrollToBooking = () => {
+    logEvent(analytics, "book_now_car_card_press");
     const bookingSection = document.getElementById("booking");
     if (bookingSection) {
       bookingSection.scrollIntoView({ behavior: "smooth" });

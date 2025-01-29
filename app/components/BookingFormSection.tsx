@@ -2,6 +2,7 @@ import { makeApiCall } from "@/utils";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { logEvent, analytics } from "../../firebase";
 
 export default function BookingFormSection() {
   const [formData, setFormData] = useState({
@@ -24,6 +25,9 @@ export default function BookingFormSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const toastId = toast.loading("Loading...");
+    logEvent(analytics, "booking_initiated", {
+      ...formData,
+    });
     const data = await makeApiCall("/lead/lead", "POST", {
       name: formData.name,
       phoneNumber: formData.phone,
