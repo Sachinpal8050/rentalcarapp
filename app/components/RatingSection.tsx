@@ -1,24 +1,33 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useState } from "react"
+import { makeApiCall } from "@/utils";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function RatingSection() {
-  const [rating, setRating] = useState(0)
-  const [comment, setComment] = useState("")
+  const [rating, setRating] = useState(0);
+  const [comment, setComment] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Rating:", rating, "Comment:", comment)
-    setRating(0)
-    setComment("")
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const toastId = toast.loading("Loading...");
+    const data = await makeApiCall("/rating/rating", "POST", {
+      rating,
+      review: comment,
+    });
+    toast.dismiss(toastId);
+    if (data.error) {
+      toast.error(data.error);
+    } else {
+      toast.success("Thanks for your feedback!");
+      setRating(0);
+      setComment("");
+    }
+  };
 
   return (
-    <section
-      id="rating"
-      className="py-20 bg-gray-100"
-    >
+    <section id="rating" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#D8843B] to-[#5A3D2F] text-transparent bg-clip-text"
@@ -54,12 +63,13 @@ export default function RatingSection() {
           </div>
           {/* Average Rating */}
           <p className="text-center text-lg mb-6 text-gray-700 font-medium">
-            Average Rating: <span className="font-bold text-yellow-500">4.8/5</span>
+            Average Rating:{" "}
+            <span className="font-bold text-yellow-500">4.8/5</span>
           </p>
           {/* Form */}
           <form onSubmit={handleSubmit}>
             <textarea
-              className="w-full p-4 border border-gray-300 rounded-xl mb-6 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D8843B] focus:border-[#D8843B] transition duration-300"
+              className="w-full p-4 border border-gray-300 rounded-xl mb-6 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#D8843B] focus:border-[#D8843B] transition duration-300 text-black"
               rows={4}
               placeholder="Leave your comment..."
               value={comment}
@@ -77,5 +87,5 @@ export default function RatingSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

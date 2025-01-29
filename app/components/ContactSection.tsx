@@ -47,6 +47,13 @@ export default function ContactSection() {
                   />
                 </svg>
                 <a
+                  href="tel:+7500353702"
+                  className="text-white hover:text-[#EE8437] transition-colors duration-300"
+                >
+                  7500353702
+                </a>
+                <span className="mx-2">{` / `}</span>
+                <a
                   href="tel:+7017434062"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >

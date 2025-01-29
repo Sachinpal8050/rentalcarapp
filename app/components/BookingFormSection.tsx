@@ -1,5 +1,7 @@
+import { makeApiCall } from "@/utils";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function BookingFormSection() {
   const [formData, setFormData] = useState({
@@ -19,18 +21,33 @@ export default function BookingFormSection() {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      dateTime: "",
-      pickup: "",
-      dropoff: "",
-      carType: "",
+    const toastId = toast.loading("Loading...");
+    const data = await makeApiCall("/lead/lead", "POST", {
+      name: formData.name,
+      phoneNumber: formData.phone,
+      email: formData.email,
+      dateTime: formData.dateTime,
+      pickupLocation: formData.pickup,
+      dropLocation: formData.dropoff,
+      carType: formData.carType,
     });
+    toast.dismiss(toastId);
+    if (data.error) {
+      toast.error(data.error);
+    } else {
+      toast.success("Booking successful!");
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        dateTime: "",
+        pickup: "",
+        dropoff: "",
+        carType: "",
+      });
+    }
   };
 
   return (
@@ -177,9 +194,9 @@ export default function BookingFormSection() {
                 className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               >
                 <option value="">Select Car Type</option>
-                <option value="car1">Swift Dzire</option>
-                <option value="car2">Traveller 16 Seater</option>
-                <option value="car3">Maruti Ertiga</option>
+                <option value="Swift Dzire">Swift Dzire</option>
+                <option value="Traveller 16 Seater">Traveller 16 Seater</option>
+                <option value="Maruti Ertiga">Maruti Ertiga</option>
               </select>
             </div>
           </div>
