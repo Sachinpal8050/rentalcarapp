@@ -33,12 +33,13 @@ export default function AboutSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-[#EE8437] to-[#FF6F00] text-transparent bg-clip-text">
-            Professional Drivers at Your Service
+            Professional Drivers at Your Service in Haridwar
           </h2>
           <p className="text-gray-300 mb-6">
             Our team of highly skilled and experienced drivers ensures a safe,
-            comfortable, and luxurious journey for every client. With extensive
-            training and a commitment to excellence, our chauffeurs provide:
+            comfortable, and luxurious journey for every client in Haridwar.
+            With extensive training and a commitment to excellence, our local
+            chauffeurs provide:
           </p>
           <ul className="space-y-4">
             <li className="flex items-start">
@@ -57,7 +58,8 @@ export default function AboutSection() {
                 />
               </svg>
               <span className="text-gray-300">
-                Punctuality and reliability for all your transportation needs
+                Punctual and reliable transportation across Uttarakhand, Uttar
+                Pradesh,Haryana and Himachal Pradesh
               </span>
             </li>
             <li className="flex items-start">
@@ -76,7 +78,8 @@ export default function AboutSection() {
                 />
               </svg>
               <span className="text-gray-300">
-                Extensive knowledge of local routes and traffic patterns
+                In-depth knowledge of Haridwar’s roads, traffic patterns, and
+                shortcuts
               </span>
             </li>
             <li className="flex items-start">
@@ -95,7 +98,8 @@ export default function AboutSection() {
                 />
               </svg>
               <span className="text-gray-300">
-                Personalized service tailored to your preferences
+                Personalized service tailored to your preferences and travel
+                needs
               </span>
             </li>
             <li className="flex items-start">

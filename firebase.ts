@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics, logEvent } from "firebase/analytics";
+import { initializeApp,  } from "firebase/app";
+import { getAnalytics, logEvent, Analytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAhf4ToZoQW5DQcX8Pug72yGiZ1bArZUOw",
@@ -15,7 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Check if analytics is supported (client-side only)
-let analytics;
+let analytics: Analytics;
 if (typeof window !== "undefined" && typeof window.document !== "undefined") {
   analytics = getAnalytics(app);
 }

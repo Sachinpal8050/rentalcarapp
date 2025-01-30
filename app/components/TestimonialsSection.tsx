@@ -9,19 +9,57 @@ const testimonials = [
     name: "Sachin",
     photo: "/avatar-placeholder.svg",
     rating: 5,
-    review: "Fantastic service, very professional driver!",
+    review:
+      "Fantastic service, the airport transfer from Dehradun was smooth and easy!",
   },
   {
     name: "Vipin Verma",
     photo: "/avatar-placeholder.svg",
     rating: 4,
-    review: "Great experience, will definitely use again.",
+    review:
+      "Great experience with the corporate travel service in Mussoorie. The vehicle was comfortable, and the driver was professional.",
   },
   {
     name: "Aman Singh",
     photo: "/avatar-placeholder.svg",
     rating: 5,
-    review: "Punctual and courteous. Highly recommended!",
+    review:
+      "Booked a city tour in Haridwar and Rishikesh. It was amazing! Highly recommend the tour guides.",
+  },
+  {
+    name: "Priya Sharma",
+    photo: "/avatar-placeholder.svg",
+    rating: 5,
+    review:
+      "The long-distance trip from Delhi to Uttarakhand was smooth. Great driving and the vehicle was very comfortable.",
+  },
+  {
+    name: "Raj Kumar",
+    photo: "/avatar-placeholder.svg",
+    rating: 4,
+    review:
+      "Chardham Yatra package was perfectly arranged. All the details were taken care of, and the experience was spiritual and peaceful.",
+  },
+  {
+    name: "Anita Saini",
+    photo: "/avatar-placeholder.svg",
+    rating: 5,
+    review:
+      "The adventure tour was incredible! Trekking in the hills and rafting in Rishikesh were experiences I will never forget.",
+  },
+  {
+    name: "Karan Mehta",
+    photo: "/avatar-placeholder.svg",
+    rating: 5,
+    review:
+      "The wildlife safari in Jim Corbett was a memorable experience. The guide was very knowledgeable, and we saw so many animals!",
+  },
+  {
+    name: "Neha Joshi",
+    photo: "/avatar-placeholder.svg",
+    rating: 5,
+    review:
+      "The customizable religious and spiritual tour was just what I needed for my spiritual retreat. Highly recommend to anyone looking for peace.",
   },
 ];
 

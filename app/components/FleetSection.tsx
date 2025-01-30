@@ -7,29 +7,27 @@ import { logEvent, analytics } from "../../firebase";
 const cars = [
   {
     name: "Swift Dzire",
-    features: "AC, comfortable seating, fuel-efficient",
-    price: "Starting at $60 per day",
-    seatingCapacity: 5, // Updated seating capacity
+    features: "AC, comfortable seating, easy to navigate, smooth ride",
+    seatingCapacity: 5,
     description:
-      "The Swift Dzire is a compact sedan known for its fuel efficiency, easy handling, and comfortable ride.",
+      "Ideal for city tours or short trips, the Swift Dzire offers a smooth ride, easy handling, and a comfortable interior. Perfect for small families or groups exploring the city with a dedicated driver.",
     image: "/swiftCarImg.jpeg",
   },
   {
     name: "Traveller 16 Seater",
-    features: "AC, spacious seating for large groups, ample luggage space",
-    price: "Starting at $250 per day",
-    seatingCapacity: 16, // Updated seating capacity
+    features:
+      "AC, spacious seating for large groups, ample luggage space, comfortable long rides",
+    seatingCapacity: 16,
     description:
-      "The Traveller 16 Seater is ideal for group travel, providing spacious seating and excellent comfort for long journeys.",
+      "Perfect for large groups or family outings, the Traveller 16 Seater provides plenty of space for both passengers and luggage. Enjoy long journeys in comfort with a dedicated driver at the wheel.",
     image: "/traveller16Seater.jpeg",
   },
   {
     name: "Maruti Ertiga",
-    features: "AC, fuel-efficient, smooth ride",
-    price: "Starting at $75 per day",
-    seatingCapacity: 7, // Same seating capacity
+    features: "AC, smooth ride, family-friendly, spacious interior",
+    seatingCapacity: 7,
     description:
-      "The Maruti Ertiga is a versatile MPV offering ample space and a comfortable ride for families or group travel.",
+      "The Maruti Ertiga offers a comfortable and spacious ride, making it ideal for family trips or small group travel. Relax in the smooth interior and enjoy the journey with the convenience of a driver.",
     image: "/eartiga.jpeg",
   },
 ];

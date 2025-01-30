@@ -34,12 +34,17 @@ export default function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link
-          href="/"
-          className="text-2xl font-bold bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
-        >
-          CarRental
-        </Link>
+        <div>
+          <Link
+            href="/"
+            className="text-2xl font-bold bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
+          >
+            UKCabs
+          </Link>
+          <div className="flex items-center px-3 py-1 bg-gradient-to-r from-[#EE8437] to-[#705541] text-white text-xs md:text-sm font-semibold rounded-lg shadow-md w-fit">
+            <span>Haridwar (U.K)</span>
+          </div>
+        </div>
         <nav className="hidden md:flex space-x-6">
           {[
             "Home",

@@ -3,19 +3,22 @@
 import { motion } from "framer-motion";
 
 const services = [
-  { name: "Airport Transfers", icon: "✈️" },
-  { name: "Corporate Travel", icon: "💼" },
-  { name: "City Tours", icon: "🏙️" },
-  { name: "Long-Distance Trips", icon: "🚗" },
-  { name: "Customizable Packages", icon: "📦" },
+  { name: "Airport Transfers (Dehradun, Pantnagar)", icon: "🛬" },
+  { name: "Corporate Travel (Mussoorie, Nainital, Dehradun)", icon: "🏢" },
+  { name: "City Tours (Haridwar, Rishikesh, Nainital)", icon: "🏙️" },
+  {
+    name: "Long-Distance Trips (Delhi to Uttarakhand & Hill Stations)",
+    icon: "🚙",
+  },
+  { name: "Chardham Yatra Packages", icon: "⛪️" },
+  { name: "Adventure Tours (Trekking, River Rafting, Skiing)", icon: "🏞️" },
+  { name: "Wildlife Safari (Rajaji National Park, Jim Corbett)", icon: "🦁" },
+  { name: "Customizable Religious & Spiritual Tours", icon: "🕉️" },
 ];
 
 export default function ServicesSection() {
   return (
-    <section
-      id="services"
-     className="py-20 bg-gray-100"
-    >
+    <section id="services" className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
         <motion.h2
           className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
@@ -37,13 +40,13 @@ export default function ServicesSection() {
               viewport={{ once: true }}
             >
               <motion.div
-                className="text-5xl mb-4 text-[#EE8437]"
+                className="text-5xl mb-4 text-[#EE8437] flex justify-center"
                 whileHover={{ scale: 1.2, rotate: 10 }}
                 whileTap={{ scale: 0.9, rotate: -10 }}
               >
                 {service.icon}
               </motion.div>
-              <h3 className="text-xl font-bold text-gray-800">
+              <h3 className="text-xl font-bold text-gray-800 text-center">
                 {service.name}
               </h3>
             </motion.div>

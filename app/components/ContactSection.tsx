@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
 export default function ContactSection() {
   return (
@@ -32,20 +33,7 @@ export default function ContactSection() {
             </h3>
             <div className="space-y-6">
               <div className="flex items-center text-lg">
-                <svg
-                  className="w-7 h-7 mr-3 text-[#EE8437]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
+                <Phone className="w-7 h-7 mr-3 text-[#EE8437]" />
                 <a
                   href="tel:+7500353702"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
@@ -61,20 +49,7 @@ export default function ContactSection() {
                 </a>
               </div>
               <div className="flex items-center text-lg">
-                <svg
-                  className="w-7 h-7 mr-3 text-[#EE8437]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+                <Mail className="w-7 h-7 mr-3 text-[#EE8437]" />
                 <a
                   href="mailto:nitinpalmzn8855@gmail.com"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
@@ -83,31 +58,22 @@ export default function ContactSection() {
                 </a>
               </div>
               <div className="flex items-center text-lg">
-                <svg
-                  className="w-7 h-7 mr-3 text-[#EE8437]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
+                <MessageCircle className="w-7 h-7 mr-3 text-[#EE8437]" />
                 <a
                   href="https://wa.me/7017434062"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >
-                  WhatsApp
+                  7500353702
                 </a>
+              </div>
+              <div className="flex items-center text-lg mt-4">
+                <MapPin className="w-7 h-7 mr-3 text-[#EE8437]" />
+                <span className="text-white">
+                  4012, Sidcul, Bahadrabad , Uttarakhand, India
+                </span>
               </div>
             </div>
           </motion.div>
-
-          {/* Right Column - Map */}
           <motion.div
             className="md:w-1/2"
             initial={{ opacity: 0, x: 50 }}
