@@ -1,4 +1,2 @@
-
-export const BASE_URL: string = "http://192.168.0.110:8000/api/v1";
-
-
+export const BASE_URL: string =
+  "http://carrentalservice1-env.eba-vvjpkar2.ap-south-1.elasticbeanstalk.com/api/v1";
