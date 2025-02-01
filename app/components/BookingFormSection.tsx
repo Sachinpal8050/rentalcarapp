@@ -124,7 +124,6 @@ export default function BookingFormSection() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
                 placeholder="Enter your email address"
                 className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               />
