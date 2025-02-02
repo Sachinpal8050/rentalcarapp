@@ -35,14 +35,14 @@ export default function ContactSection() {
               <div className="flex items-center text-lg">
                 <Phone className="w-7 h-7 mr-3 text-[#EE8437]" />
                 <a
-                  href="tel:+7500353702"
+                  href="tel:7500353702"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >
                   7500353702
                 </a>
                 <span className="mx-2">{` / `}</span>
                 <a
-                  href="tel:+7017434062"
+                  href="tel:7017434062"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >
                   7017434062
@@ -63,7 +63,7 @@ export default function ContactSection() {
                   href="https://wa.me/7017434062"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >
-                  7500353702
+                  7017434062
                 </a>
               </div>
               <div className="flex items-center text-lg mt-4">
