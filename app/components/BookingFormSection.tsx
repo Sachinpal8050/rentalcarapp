@@ -64,7 +64,7 @@ export default function BookingFormSection() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Book Your Ride Now!
+          Inquire About Your Ride!
         </motion.h2>
         <motion.form
           onSubmit={handleSubmit}
@@ -209,7 +209,7 @@ export default function BookingFormSection() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Book Now
+            Inquire Now
           </motion.button>
         </motion.form>
       </div>

@@ -39,7 +39,7 @@ export default function Header() {
             href="/"
             className="text-2xl font-bold bg-gradient-to-r from-[#EE8437] to-[#705541] text-transparent bg-clip-text"
           >
-            MBTtravels
+            MBT-Travels
           </Link>
           <div className="flex items-center px-3 py-1 bg-gradient-to-r from-[#EE8437] to-[#705541] text-white text-xs md:text-sm font-semibold rounded-lg shadow-md w-fit">
             <span>Haridwar (U.K)</span>
@@ -73,7 +73,7 @@ export default function Header() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Book Now
+          Inquire Now
         </motion.button>
       </div>
     </motion.header>
