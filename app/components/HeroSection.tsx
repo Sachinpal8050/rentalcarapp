@@ -55,7 +55,7 @@ export default function HeroSection() {
             whileTap={{ scale: 0.95 }}
             onClick={scrollToBooking}
           >
-            Inquire Now
+            Enquire Now
           </motion.button>
           <motion.button
             className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-[#EE8437] transition-colors duration-300"

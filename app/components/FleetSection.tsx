@@ -88,7 +88,7 @@ export default function FleetSection() {
                   whileTap={{ scale: 0.95 }}
                   onClick={scrollToBooking}
                 >
-                  Inquire Now
+                  Enquire Now
                 </motion.button>
               </div>
             </motion.div>
