@@ -48,7 +48,7 @@ export default function HeroSection() {
         >
           Affordable, reliable, and luxurious travel solutions.
         </motion.p>
-        <div className="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
+        <div className="flex flex-row justify-center gap-4">
           <motion.button
             className="bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-6 py-3 rounded-full text-lg font-semibold hover:shadow-lg transition-shadow duration-300"
             whileHover={{ scale: 1.05 }}
