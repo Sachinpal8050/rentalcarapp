@@ -41,7 +41,7 @@ export default function Header() {
           >
             MBT-Travels
           </Link>
-          <div className="flex items-center px-3 py-1 bg-gradient-to-r from-[#EE8437] to-[#705541] text-white text-xs md:text-sm font-semibold rounded-lg shadow-md w-fit">
+          <div className="flex items-center px-3 py-1 bg-gradient-to-r from-[#EE8437] to-[#705541] text-white text-xs md:text-sm font-semibold rounded-2xl shadow-md w-fit">
             <span>Haridwar (U.K)</span>
           </div>
         </div>

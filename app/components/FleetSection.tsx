@@ -76,12 +76,13 @@ export default function FleetSection() {
                 <h3 className="text-2xl font-semibold mb-2 text-gray-800">
                   {car.name}
                 </h3>
-                <p className="text-gray-600 mb-4">{car.features}</p>
-                <p className="text-gray-500 mb-4">{car.description}</p>
-                <p className="text-gray-600 mb-4">
+                <span className="text-black">{car.description}</span>
+                <span className="text-black mt-5 block">{car.features}</span>
+                <p>{""}</p>
+                <h4 className="text-gray-600 mb-4 mt-5">
                   <strong>Seating Capacity: </strong>
                   {car.seatingCapacity} seats
-                </p>{" "}
+                </h4>{" "}
                 <motion.button
                   className="w-full bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
