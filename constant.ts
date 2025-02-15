@@ -1,2 +1,1 @@
-export const BASE_URL: string =
-  "https://api.mbttravels.info/api/v1";
+export const BASE_URL: string = "https://api.trendytourandtravels.com/api/v1";
