@@ -197,6 +197,7 @@ export default function BookingFormSection() {
                 className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               >
                 <option value="">Select Car Type</option>
+                <option value="Kia Carens">Kia Carens</option>
                 <option value="Swift Dzire">Swift Dzire</option>
                 <option value="Traveller 16 Seater">Traveller 16 Seater</option>
                 <option value="Maruti Ertiga">Maruti Ertiga</option>

@@ -6,6 +6,16 @@ import { logEvent, analytics } from "../../firebase";
 
 const cars = [
   {
+    name: "Kia Carens",
+    features:
+      "AC, luxurious seating, premium comfort, advanced safety features",
+    seatingCapacity: 7,
+    description:
+      "The Kia Carens redefines luxury travel with its premium interiors, advanced safety features, and spacious seating. Ideal for business trips or high-end family travel.",
+    image: "/kiaCarnival.jpeg",
+    comingSoon: true,
+  },
+  {
     name: "Swift Dzire",
     features: "AC, comfortable seating, easy to navigate, smooth ride",
     seatingCapacity: 5,
@@ -57,7 +67,7 @@ export default function FleetSection() {
           {cars.map((car, index) => (
             <motion.div
               key={car.name}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 relative"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -71,6 +81,13 @@ export default function FleetSection() {
                   objectFit="cover"
                   className="transition-transform duration-300 transform hover:scale-105"
                 />
+                {car.comingSoon && (
+                  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">
+                      Coming Soon
+                    </span>
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-2 text-gray-800">
