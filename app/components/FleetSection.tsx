@@ -7,8 +7,7 @@ import { logEvent, analytics } from "../../firebase";
 const cars = [
   {
     name: "Kia Carens",
-    features:
-      "AC, luxurious seating, premium comfort, advanced safety features",
+    features: "AC, luxurious seating, premium comfort, advanced safety features",
     seatingCapacity: 7,
     description:
       "The Kia Carens redefines luxury travel with its premium interiors, advanced safety features, and spacious seating. Ideal for business trips or high-end family travel.",
@@ -63,6 +62,11 @@ export default function FleetSection() {
         >
           Our Fleet
         </motion.h2>
+
+        <p className="text-lg text-gray-700 text-center mb-8">
+          Choose from our fleet of luxury and comfortable cars, perfect for your travels in Uttarakhand.
+        </p>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cars.map((car, index) => (
             <motion.div
@@ -73,38 +77,47 @@ export default function FleetSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
+              {/* Car Image */}
               <div className="relative h-56">
                 <Image
                   src={car.image || "/placeholder.svg"}
-                  alt={car.name}
+                  alt={`Luxury rental - ${car.name}`}
                   layout="fill"
                   objectFit="cover"
+                  priority={index < 2} // Load first 2 images with priority
                   className="transition-transform duration-300 transform hover:scale-105"
                 />
                 {car.comingSoon && (
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                    <span className="text-white text-2xl font-bold">
+                    <span className="text-white text-lg font-semibold tracking-wide">
                       Coming Soon
                     </span>
                   </div>
                 )}
               </div>
+
+              {/* Car Details */}
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2 text-gray-800">
+                <h3 className="text-2xl font-semibold mb-2 text-gray-900">
                   {car.name}
                 </h3>
-                <span className="text-black">{car.description}</span>
-                <span className="text-black mt-5 block">{car.features}</span>
-                <p>{""}</p>
-                <h4 className="text-gray-600 mb-4 mt-5">
-                  <strong>Seating Capacity: </strong>
-                  {car.seatingCapacity} seats
-                </h4>{" "}
+                <p className="text-gray-600 mb-4">{car.description}</p>
+
+                <h4 className="text-gray-700">
+                  <strong>Features:</strong> {car.features}
+                </h4>
+
+                <h4 className="text-gray-700 mt-3">
+                  <strong>Seating Capacity:</strong> {car.seatingCapacity} seats
+                </h4>
+
+                {/* Enquire Now Button */}
                 <motion.button
-                  className="w-full bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300"
+                  className="mt-6 w-full bg-gradient-to-r from-[#EE8437] to-[#705541] text-white px-6 py-3 rounded-full font-semibold text-lg hover:shadow-lg transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={scrollToBooking}
+                  aria-label={`Enquire now about ${car.name}`}
                 >
                   Enquire Now
                 </motion.button>
