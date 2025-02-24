@@ -43,7 +43,7 @@ export default function WhyChooseUsSection() {
         {/* Description for SEO */}
         <p className="text-lg text-gray-700 text-center mb-8">
           We prioritize affordability, reliability, and customer satisfaction.
-          Here's why our customers trust us for car rentals in Uttarakhand.
+          Here&apos;s why our customers trust us for car rentals in Uttarakhand.
         </p>
 
         {/* Grid Layout for Reasons */}
