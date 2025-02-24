@@ -40,8 +40,10 @@ export default function RatingSection() {
       toast.success("Thanks for your feedback!", { id: toastId });
       setRating(0);
       setComment("");
-    } catch (error: any) {
-      toast.error(error.message || "Something went wrong.", { id: toastId });
+    } catch (error: unknown) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Something went wrong.";
+      toast.error(errorMessage, { id: toastId });
     }
   };
 
@@ -89,7 +91,8 @@ export default function RatingSection() {
 
           {/* Average Rating */}
           <p className="text-center text-lg mb-6 text-gray-700 font-medium">
-            Average Rating: <span className="font-bold text-yellow-500">4.8/5</span>
+            Average Rating:{" "}
+            <span className="font-bold text-yellow-500">4.8/5</span>
           </p>
 
           {/* Form */}
