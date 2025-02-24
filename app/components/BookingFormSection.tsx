@@ -6,8 +6,25 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { logEvent, analytics } from "../../firebase";
 
+type FormField =
+  | "name"
+  | "phone"
+  | "email"
+  | "dateTime"
+  | "pickup"
+  | "dropoff"
+  | "carType";
+
 export default function BookingFormSection() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<{
+    name: string;
+    phone: string;
+    email: string;
+    dateTime: string;
+    pickup: string;
+    dropoff: string;
+    carType: string;
+  }>({
     name: "",
     phone: "",
     email: "",
@@ -21,11 +38,18 @@ export default function BookingFormSection() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    setFormData((prevData) => ({ ...prevData, [name as FormField]: value }));
   };
 
   const validateForm = () => {
-    if (!formData.name || !formData.phone || !formData.dateTime || !formData.pickup || !formData.dropoff || !formData.carType) {
+    if (
+      !formData.name ||
+      !formData.phone ||
+      !formData.dateTime ||
+      !formData.pickup ||
+      !formData.dropoff ||
+      !formData.carType
+    ) {
       toast.error("Please fill in all required fields.");
       return false;
     }
@@ -39,7 +63,7 @@ export default function BookingFormSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
-    
+
     const toastId = toast.loading("Submitting your enquiry...");
     logEvent(analytics, "booking_initiated", { ...formData });
 
@@ -97,22 +121,54 @@ export default function BookingFormSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { label: "Full Name", name: "name", type: "text", placeholder: "Enter your full name" },
-              { label: "Phone Number", name: "phone", type: "tel", placeholder: "Enter your phone number" },
-              { label: "Email Address", name: "email", type: "email", placeholder: "Enter your email (optional)" },
-              { label: "Date & Time", name: "dateTime", type: "datetime-local" },
-              { label: "Pickup Location", name: "pickup", type: "text", placeholder: "Enter pickup location" },
-              { label: "Drop-off Location", name: "dropoff", type: "text", placeholder: "Enter drop-off location" },
+              {
+                label: "Full Name",
+                name: "name",
+                type: "text",
+                placeholder: "Enter your full name",
+              },
+              {
+                label: "Phone Number",
+                name: "phone",
+                type: "tel",
+                placeholder: "Enter your phone number",
+              },
+              {
+                label: "Email Address",
+                name: "email",
+                type: "email",
+                placeholder: "Enter your email (optional)",
+              },
+              {
+                label: "Date & Time",
+                name: "dateTime",
+                type: "datetime-local",
+              },
+              {
+                label: "Pickup Location",
+                name: "pickup",
+                type: "text",
+                placeholder: "Enter pickup location",
+              },
+              {
+                label: "Drop-off Location",
+                name: "dropoff",
+                type: "text",
+                placeholder: "Enter drop-off location",
+              },
             ].map(({ label, name, type, placeholder }) => (
               <div key={name}>
-                <label htmlFor={name} className="block mb-2 text-lg font-medium text-gray-700">
+                <label
+                  htmlFor={name}
+                  className="block mb-2 text-lg font-medium text-gray-700"
+                >
                   {label}
                 </label>
                 <input
                   type={type}
                   id={name}
                   name={name}
-                  value={formData[name]}
+                  value={formData[name as FormField]}
                   onChange={handleChange}
                   required={name !== "email"}
                   placeholder={placeholder}
@@ -122,7 +178,10 @@ export default function BookingFormSection() {
             ))}
 
             <div>
-              <label htmlFor="carType" className="block mb-2 text-lg font-medium text-gray-700">
+              <label
+                htmlFor="carType"
+                className="block mb-2 text-lg font-medium text-gray-700"
+              >
                 Car Type
               </label>
               <select
@@ -134,7 +193,12 @@ export default function BookingFormSection() {
                 className="w-full p-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6F00] text-gray-800 transition-all duration-300"
               >
                 <option value="">Select Car Type</option>
-                {["Kia Carens", "Swift Dzire", "Traveller 16 Seater", "Maruti Ertiga"].map((car) => (
+                {[
+                  "Kia Carens",
+                  "Swift Dzire",
+                  "Traveller 16 Seater",
+                  "Maruti Ertiga",
+                ].map((car) => (
                   <option key={car} value={car}>
                     {car}
                   </option>
