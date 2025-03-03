@@ -12,7 +12,7 @@ const cars = [
     description:
       "The Kia Carens redefines luxury travel with its premium interiors, advanced safety features, and spacious seating. Ideal for business trips or high-end family travel.",
     image: "/kiaCarnival.jpeg",
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     name: "Swift Dzire",

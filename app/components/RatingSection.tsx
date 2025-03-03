@@ -30,12 +30,12 @@ export default function RatingSection() {
     const toastId = toast.loading("Submitting...");
 
     try {
-      const data = await makeApiCall("/rating/rating", "POST", {
+      await makeApiCall("/rating/rating", "POST", {
         rating,
         review: comment,
       });
-
-      if (data.error) throw new Error(data.error);
+      toast.success("Thanks for your feedback!", { id: toastId });
+      // if (data.error) throw new Error(data.error);
 
       toast.success("Thanks for your feedback!", { id: toastId });
       setRating(0);
