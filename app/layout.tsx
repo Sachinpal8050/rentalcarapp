@@ -42,6 +42,37 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <link rel="icon" href="/favicon.png" type="image/png" />
+      <meta
+        property="og:title"
+        content="TrendyTour&Travels - Best Travel Services in Haridwar Uttarakhand"
+      />
+      <meta
+        property="og:description"
+        content="Book the best car rental and taxi services in Uttarakhand at affordable prices."
+      />
+      <meta
+        property="og:image"
+        content="https://trendytourandtravels.com/favicon.png"
+      />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="512" />
+      <meta property="og:image:height" content="512" />
+      <meta property="og:url" content="https://trendytourandtravels.com" />
+      <meta property="og:type" content="website" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="TrendyTour&Travels - Best Travel Services in Haridwar Uttarakhand"
+      />
+      <meta
+        name="twitter:description"
+        content="Book the best car rental and taxi services in Uttarakhand at affordable prices."
+      />
+      <meta
+        name="twitter:image"
+        content="https://trendytourandtravels.com/favicon.png"
+      />
       <body className={inter.className}>{children}</body>
     </html>
   );
