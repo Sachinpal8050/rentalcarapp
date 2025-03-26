@@ -35,17 +35,17 @@ export default function ContactSection() {
               <div className="flex items-center text-lg">
                 <Phone className="w-7 h-7 mr-3 text-[#EE8437]" />
                 <a
+                  href="tel:7505061606"
+                  className="text-white hover:text-[#EE8437] transition-colors duration-300"
+                >
+                  7505061606
+                </a>
+                <span className="mx-2">{` / `}</span>
+                <a
                   href="tel:7500353702"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >
                   7500353702
-                </a>
-                <span className="mx-2">{` / `}</span>
-                <a
-                  href="tel:7017434062"
-                  className="text-white hover:text-[#EE8437] transition-colors duration-300"
-                >
-                  7017434062
                 </a>
               </div>
               <div className="flex items-center text-lg">
@@ -54,16 +54,16 @@ export default function ContactSection() {
                   href="mailto:nitinpalmzn8855@gmail.com"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >
-                  nitinpalmzn8855@gmail.com
+                  trendytourandtravels@gmail.com
                 </a>
               </div>
               <div className="flex items-center text-lg">
                 <MessageCircle className="w-7 h-7 mr-3 text-[#EE8437]" />
                 <a
-                  href="https://wa.me/7017434062"
+                  href="https://wa.me/7505061606?text=Hello%20Trendytourandtravels,%20I%20would%20like%20to%20book%20a%20trip.%20Could%20you%20please%20share%20your%20packages%20and%20offerings?"
                   className="text-white hover:text-[#EE8437] transition-colors duration-300"
                 >
-                  7017434062
+                  7505061606
                 </a>
               </div>
               <div className="flex items-center text-lg mt-4">
